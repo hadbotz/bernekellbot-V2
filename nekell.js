@@ -20,6 +20,7 @@ const { performance } = require('perf_hooks')
 const { Primbon } = require('scrape-primbon')
 const primbon = new Primbon()
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom } = require('./lib/myfunc')
+const {bytesToSize,  UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
 
 // read database
 global.db = JSON.parse(fs.readFileSync('./src/database.json'))
@@ -1117,6 +1118,7 @@ break
             }
             break 
             case 'smeme': case 'stickermeme': case 'stickmeme': {
+let { TelegraPh } = require('./lib/uploader')
 if (!text) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
 if (text.includes('|')) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
 if (!/image/.test(mime)) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Yahaha Tepod*`)
@@ -1130,6 +1132,7 @@ await fs.unlinkSync(memek)
 }
 break
 case 'memegen': case 'smeme2': {
+let { TelegraPh } = require('./lib/uploader')
 if (!text) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Udah mah jelek tepos|banyak batt gaya nya*`)
 if (!text.includes('|')) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Bernekell|Boy*`)
 if (!/image/.test(mime)) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Bernekell|Boy*`)
