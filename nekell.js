@@ -439,6 +439,10 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             case 'sc': {
                 m.reply('Script : https://github.com/koleksibot\n\n Dont Forget Give Star\n\nDonate : 6289695073357 (Dana)\nSaweria : https://saweria.co/nekellganss\nGopay : 081224413305\n\n Dont Forget Donate')
             }
+            break 
+            case 'tqto': {
+                m.reply('ོAhmadChenDev : ${ahmad}\nོFatih Arridho : ${fatih}\nོAmeliavoss : ${ameliavoss}')
+            }
             break
             case 'chat': {
                 if (!isCreator) throw mess.owner
@@ -926,7 +930,67 @@ break
 
              }
             }
-            break
+            break 
+            case 'rules': {
+                m.reply('
+╭─────[ *PERATURAN* ]─────✧
+┴「 ANDA SOPAN KAMI PUN SEGAN! 」
+│¹ Dilarang Hina Bot / Owner
+│² Dilarang Spam Commands
+│³ Dilarang Kirim Virtex / Virkon
+│⁴ Dilarang Spam Menu Gak Jelas
+│⁵ Dilarang Telpon / Vc bot
+│⁶ Dilarang Culik Bot / Trial 2 Day
+│⁷ Dilarang Promosi
+│⁸ Dilarang Meniru pesan Bot
+│⁹ Bot Tidak Menerima Save Kontak 🗿
+│¹⁰ Dilarang Chat Owner Ga Jelas
+│¹¹ No plagiat
+┬
+╰──────────···
+
+╭─────[ *HUKUMAN* ]─────✧
+┴ 「 HUKUMAN BILA MELANGGAR ATURAN/RULES BOT! 」
+│ 1 & 11 = Block + banned permanent 🗿
+│ 2,4,6 & 8 = Banned sementara ✌
+│ 3 = War 👻
+│ 5 = Block sementara ✨
+│ 9 & 10 = Block permanent 🗿
+┬
+
+1. Jangan spam bot. 🙅
+Sanksi: *❎ WARN/SOFT BLOCK*
+
+2. Jangan telepon/vc bot. ☎️
+Sanksi: *❎ SOFT BLOCK*
+
+3. Jangan mengeksploitasi bot.
+Sanksi: *PERMANENT BLOCK*
+
+4. Bot Aktif Jika Owner Aktif!
+
+🗯️ Bot tidak atau lambat merespon ?
+➡️ Mungkin dipengaruhi oleh jaringan, signal, banned oleh Whatsapp dan beberapa asalan. Tetap patuhi rules‼️
+
+🗯️ Dimana saya bisa mendapatkan Script dari bot ini ?
+➡️ Script ini masih private dan tidak pernah diperjual belikan ,bijaklah dalam mengetahui penipu.
+
+🗯️ Boleh saya menambah ke grup?
+➡️ Untuk sementara bot dalam status free to add.
+
+🗯️ Prefixnya apa ya?
+➡️ Bot ini menggunakan multi prefix. Berarti anda bisa menggunakan prefix #, . , Dan prefix wajar lainnya.
+
+🗯️ Kak, kok syaa chat owner tidak direspon?
+➡️ Owner hanya merespon pertanyaan seputar bot Dan kendala error, tidak untuk kenalan ataupun mengemis script.
+
+
+Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
+
+⚠️ Segala kebijakan dan ketentuan di pegang oleh owner dan segala perubahan kebijakan, sewaktu waktu owner berhak mencabut, memblokir user(*﹏*) 
+
+「 📍TERIMAKASIH UNTUK KALIAN USER RAMAH!📍 」')
+}
             case 'editinfo': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
@@ -2047,7 +2111,25 @@ ${id}`)
 ( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
 		m.reply(txt)
 		}
-		break
+		break 
+		case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'waifu':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
+					reply(lang.wait())
+					axios.get(`https://api.waifu.pics/sfw/${command}`)
+					.then(({data}) => {
+						alpha.sendMediaAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
+
+
+					})
+					break
+				case 'waifu': case 'loli':
+					reply(lang.wait())
+					axios.get(`https://api.waifu.pics/sfw/waifu`)
+					.then(({data}) => {
+					alpha.sendMediaAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
+
+
+					})
+		   break
 		   case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'tupai':
                 try {
                 let set
@@ -2330,6 +2412,9 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 m.reply(respon)
             }
             break
+            case 'tes': case 'runtime':
+            reply(`Runtime : ${runtime(process.uptime())}`) 
+            break
             case 'owner': case 'creator': case 'nekell': {
                 nekell.sendContact(m.chat, global.owner, m)
             }
@@ -2404,6 +2489,41 @@ BELUM MELEBIHI BATAS WAKTU!!.*
 │⭔ ${prefix}hapusvote
 │
 └───────⭓
+
+╭─❒ 「 Random Anime 」💉
+├ Galau itu wajar dan normal karena ia adalah proses penyesuaian diri dengan kehidupan yang lebih berkelas.
+├ ${prefix}loli
+├ ${prefix}neko
+├ ${prefix}waifu
+├ ${prefix}shinobu
+├ ${prefix}megumin
+├ ${prefix}bully
+├ ${prefix}cuddle
+├ ${prefix}cry
+├ ${prefix}hug
+├ ${prefix}awoo
+├ ${prefix}kiss
+├ ${prefix}lick
+├ ${prefix}pat
+├ ${prefix}smug
+├ ${prefix}bonk
+├ ${prefix}yeet
+├ ${prefix}blush
+├ ${prefix}smile
+├ ${prefix}wave
+├ ${prefix}highfive
+├ ${prefix}handhold
+├ ${prefix}nom
+├ ${prefix}bite
+├ ${prefix}glomp
+├ ${prefix}slap
+├ ${prefix}kill
+├ ${prefix}happy
+├ ${prefix}wink
+├ ${prefix}poke
+├ ${prefix}dance
+╰❒ ${prefix}cringe
+
 
 ┌──⭓ *Downloader Menu*
 │
