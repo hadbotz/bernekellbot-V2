@@ -653,7 +653,7 @@ Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_
+                                    "url": 'https://instagram.com/bernekellboy_'
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -694,7 +694,7 @@ Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/nekellzabarrudin'
+                                    "url": 'https://instagram.com/bernekellboy_'
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -1693,121 +1693,6 @@ break
                 m.reply(mess.wait)
                 nekell.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/anime/'+command, 'apikey') }, caption: `Download From ${text}` }, { quoted: m})
             }
-            break 
-            case 'webtonsearch': case 'webtoon':
-                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
-                await m.reply(mess.wait())
-                kell.Webtoons(q).then(async data => {
-                    let txt = `*------「 WEBTOONS-SEARCH 」------*\n\n`
-                    for (let i of data) {
-                        txt += `*📫 Title :* ${i.judul}\n`
-                        txt += `*👍🏻 Like :* ${i.like}\n`
-                        txt += `*🤴🏻 Creator :* ${i.creator}\n`
-                        txt += `*🎥 Genre :* ${i.genre}\n`
-                        txt += `*📚 Url :* ${i.url}\n ----------------------------------------------------------\n`
-                    }
-                    await m.reply(txt)
-                })
-                .catch((err) => {
-                    m.reply(mess.err())
-                })
-            break
-            case 'drakor':
-                if (!q) return m.reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
-                await m.reply(mess.wait())
-                kell.Drakor(q).then(async data => {
-                    let txt = `*-----「 DRAKOR-SEARCH 」-----*\n\n`
-                    for (let i of data) {
-                        txt += `*📫 Title :* ${i.judul}\n`
-                        txt += `*📆 Years :* ${i.years}\n`
-                        txt += `*🎥 Genre :* ${i.genre}\n`
-                        txt += `*📚 Url :* ${i.url}\n-----------------------------------------------------\n`
-                    }
-                    await sendFileFromUrl(from,data[0].thumbnail,txt,m)
-                })
-                .catch((err) => {
-                    m.reply(mess.err())
-                })
-            break
-            case 'anime':
-                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
-                await m.reply(mess.wait())
-                kell.Anime(q).then(async data => {
-                    let txt = `*-------「 ANIME-SEARCH 」-------*\n\n`
-                    for (let i of data) {
-                        txt += `*📫 Title :* ${i.judul}\n`
-                        txt += `*📚 Url :* ${i.link}\n-----------------------------------------------------\n`
-                    }
-                    await sendFileFromUrl(from,data[0].thumbnail,txt,m)
-                })
-                .catch((err) => {
-                    m.reply(mess.err())
-                })
-            break
-            case 'character': case 'karakter':
-                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
-                await m.reply(mess.wait())
-                kell.Character(q).then(async data => {
-                    let txt = `*---「 CHARACTER-SEARCH 」---*\n\n`
-                    for (let i of data) {
-                        txt += `*📫 Character :* ${i.character}\n`
-                        txt += `*📚 Url :* ${i.link}\n-----------------------------------------------------\n`
-                    }
-                    await sendFileFromUrl(from,data[0].thumbnail,txt,m)
-                })
-                .catch((err) => {
-                    m.reply(mess.err())
-                })
-            break
-            case 'manga':
-                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
-                await m.reply(mess.wait())
-                kell.Manga('naruto').then(async data => {
-                    let txt = `*------「 MANGA-SEARCH 」------*\n\n`
-                    for (let i of data) {
-                         txt += `*📫 Title :* ${i.judul}\n`
-                         txt += `*📚 Url :* ${i.link}\n-----------------------------------------------------\n`
-                    }
-                    await sendFileFromUrl(from,data[0].thumbnail,txt,m)
-                })
-                .catch((err) => {
-                    m.reply(mess.err())
-                })
-            break
-            case 'film':
-                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
-                await m.reply(mess.wait())
-                kell.Film(q).then(async data => {
-                    let txt = `*--------「 FILM-SEARCH 」--------*\n\n`
-                    for (let i of data) {
-                        txt += `*📫 Title :* ${i.judul}\n`
-                        txt += `*🎞️ Type :* ${i.type}\n`
-                        txt += `*📟 Quality :* ${i.quality}\n`
-                        txt += `*📮Upload :* ${i.upload}\n`
-                        txt += `*📚 Url :* ${i.link}\n-----------------------------------------------------\n`
-                    }
-                    await sendFileFromUrl(from,data[0].thumb,txt,m)
-                })
-                .catch((err) => {
-                    m.reply(mess.err())
-                })
-                    break
-            case 'twtdl': case 'twt': case 'twitterdl': case 'twitter':
-                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
-                if (!isUrl(q)) return m.reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
-                if (!q.includes('twitter.com')) return m.reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
-                await m.reply(mess.wait())
-                kell.Twitter(`${q}`).then(async data => {
-                    let txt = `*----「 TWITTER DOWNLOADER 」----*\n\n`
-                    txt += `*📫 Title :* ${data.title}\n`
-                    txt += `*📟 Quality :* ${data.medias[1].quality}\n`
-                    txt += `*💾 Size :* ${data.medias[1].formattedSize}\n`
-                    txt += `*📚 Url :* ${data.url}`
-                    sendFileFromUrl(from,data.medias[1].url,txt,m)
-                })
-                .catch((err) => {
-                    m.reply(mess.err())
-                })
             break
             case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'waifu':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
 					m.reply(mess.wait)
@@ -3156,7 +3041,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break 
             case 'ephoto': case 'ephotomenu': {
-            ┌──⭓ *Ephoto Menu*
+                 anu = `┌──⭓ *Ephoto Menu*
 │
 │⭔ ${prefix}ffcover
 │⭔ ${prefix}crossfire
@@ -3210,7 +3095,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break 
             case 'funmenu': {
-┌──⭓ *Fun Menu*
+                 anu = `┌──⭓ *Fun Menu*
 │
 │⭔ ${prefix}twitterdl
 │⭔ ${prefix}film
@@ -3274,7 +3159,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break 
             case 'primbonmenu': {
-┌──⭓ *Primbon Menu*
+                 anu = `┌──⭓ *Primbon Menu*
 │
 │⭔ ${prefix}nomorhoki
 │⭔ ${prefix}artimimpi
