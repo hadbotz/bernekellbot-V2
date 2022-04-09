@@ -431,13 +431,291 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }, 60000), poin, poin_lose, timeout
             }
             }
+            break 
+            case 'bot': case 'onkah': {
+                anu = `Hallo ${pushname} Bot ${botname} Sudah Aktif Silahkan Pakai Sesuka Hati Kalian🤗
+ `
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'W E B S I T E',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'ALLMENU',
+                                    "id": 'allmenu'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'GCOFFIC',
+                                    "id": 'gcbot'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'sewa': case 'sewabot': {
+                anu = `Hai ${m.pushName}*\n\n Bot Rental Prices\n⭔ 10K Per Group via Dana 1 Month\n⭔ 13K via pulsa 1 Month\n\n Premium Price Bot\n⭔ 15k per User 1 bulan\n\nPayment can be via Dana, Pulsa, Gopay\n\nFor more details, you can chat with the owner\nhttps://wa.me/6289695073357 (Owner)
+`
+            let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'W E B S I T E',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'ALLMENU',
+                                    "id": 'allmenu'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
             break
-	    case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                nekell.sendMessage(m.chat, { image: { url: 'https://i.ibb.co/DbHZN9w/20211231-171953.jpg' }, caption: `*Hai Sloerddd ${m.pushName}*\n\n Bot Rental Prices\n⭔ 10K Per Group via Dana 1 Month\n⭔ 13K via pulsa 1 Month\n\n Premium Price Bot\n⭔ 15k per User 1 bulan\n\nPayment can be via Dana/Gopay/Bank/Pulsa\n\nFor more details, you can chat with the owner\nhttps://wa.me/6289695073357 (Owner)\n\nDonate For Me : \n\n⭔ Dana : 089695073357\n⭔ Saweria : https://saweria.co/nekellganss` }, { quoted: m })
+            case 'gcbot': case 'gc': {
+                anu = `https://chat.whatsapp.com/J4ii7zkiySP9s6xdlZDggp\n\nGroup Official Bernekellbot And All My Friends 
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'W E B S I T E',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'ALLMENU',
+                                    "id": 'allmenu'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'RUNTIME',
+                                    "id": 'runtime'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break
+            case 'rules': case'peraturan': {
+                anu = `╭─────[ *HUKUMAN* ]─────✧
+┴ 「 HUKUMAN BILA MELANGGAR ATURAN/RULES BOT! 」
+│ 1 & 11 = Block + banned permanent 🗿
+│ 2,4,6 & 8 = Banned sementara ✌
+│ 3 = War 👻
+│ 5 = Block sementara ✨
+│ 9 & 10 = Block permanent 🗿
+┬
+
+1. Jangan spam bot. 🙅
+Sanksi: *❎ WARN/SOFT BLOCK*
+
+2. Jangan telepon/vc bot. ☎️
+Sanksi: *❎ SOFT BLOCK*
+
+3. Jangan mengeksploitasi bot.
+Sanksi: *PERMANENT BLOCK*
+
+4. Bot Aktif Jika Owner Aktif!
+
+🗯️ Bot tidak atau lambat merespon ?
+➡️ Mungkin dipengaruhi oleh jaringan, signal, banned oleh Whatsapp dan beberapa asalan. Tetap patuhi rules‼️
+
+🗯️ Dimana saya bisa mendapatkan Script dari bot ini ?
+➡️ Script ini masih private dan tidak pernah diperjual belikan ,bijaklah dalam mengetahui penipu.
+
+🗯️ Boleh saya menambah ke grup?
+➡️ Untuk sementara bot dalam status free to add.
+
+🗯️ Prefixnya apa ya?
+➡️ Bot ini menggunakan multi prefix. Berarti anda bisa menggunakan prefix #, . , Dan prefix wajar lainnya.
+
+🗯️ Kak, kok syaa chat owner tidak direspon?
+➡️ Owner hanya merespon pertanyaan seputar bot Dan kendala error, tidak untuk kenalan ataupun mengemis script.
+
+
+Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
+
+⚠️ Segala kebijakan dan ketentuan di pegang oleh owner dan segala perubahan kebijakan, sewaktu waktu owner berhak mencabut, memblokir user(*﹏*) 
+
+「 📍TERIMAKASIH UNTUK KALIAN USER RAMAH!📍 」
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'W E B S I T E',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'ALLMENU',
+                                    "id": 'allmenu'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SCRIPT',
+                                    "id": 'sc'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SEWA',
+                                    "id": 'sewa'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+        break
+	    case 'donasi': case 'donate': {
+                anu = `*│➸ Donate For Me : \n\n⭔ Dana : 089695073357\n│➸ Saweria : https://saweria.co/nekellganss\n│➸ Pulsa : 081224413305
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'W E B S I T E',
+                                    "url": 'https://rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'PING',
+                                    "id": 'ping'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
             case 'sc': {
-                m.reply('Script : https://github.com/koleksibot\n\n Dont Forget Give Star\n\nDonate : 6289695073357 (Dana)\nSaweria : https://saweria.co/nekellganss\nGopay : 081224413305\n\n Dont Forget Donate')
+                anu = `│➸ Script : https://www.rootsec.xyz/2022/03/script-bot-whatsapp-terbaru-versi-md-no.html/\n\n│➸ Dont Forget Share In My Friends
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'W E B S I T E',
+                                    "url": 'https://rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/nekellzabarrudin'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'PING',
+                                    "id": 'ping'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
             case 'chat': {
@@ -971,7 +1249,7 @@ break
             }
             break
             case 'bcgc': case 'bcgroup': {
-                if (!isOwner) throw mess.owner
+                if (!isCreator) throw mess.owner
                 if (!text) throw `Text mana?\n\nExample : ${prefix + command} Jangan Lupa Donasi`
                 let getGroups = await nekell.groupFetchAllParticipating()
                 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
@@ -981,28 +1259,28 @@ break
                     await sleep(1500)
                     let btn = [{
                                 "urlButton": {
-                                    "displayText": '📌「 BLOG 」',
-                                    "url": 'https://koleksibot.blogspot.com/'
+                                    "displayText": 'W E B S I T E',
+                                    "url": 'https://rootsec.xyz/'
                                 }
                             }, {
                                 "urlButton": {
-                                    "displayText": '📍「 INSTAGRAM 」',
+                                    "displayText": 'I N S T A G R A M',
                                     "phoneNumber": 'https://instagram.com/bernekellboy_'
                                 }
                             }, {
                                 "quickReplyButton": {
-                                    "displayText": 'Status Bot',
+                                    "displayText": 'PING',
                                     "id": 'ping'
                                 }
                             }, {
                                 "quickReplyButton": {
-                                    "displayText": 'Owner',
+                                    "displayText": 'OWNER',
                                     "id": 'owner'
                                 }  
                             }, {
                                 "quickReplyButton": {
-                                    "displayText": 'Script',
-                                    "id": 'sc'
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
                                 }
                             }]
                       nekellgans = fs.readFileSync('./lib/nekell.jpg')
@@ -1013,7 +1291,7 @@ break
             }
             break
             case 'bc': case 'broadcast': case 'bcall': {
-                if (!isOwner) throw mess.owner
+                if (!isCreator) throw mess.owner
                 if (!text) throw `Text mana?\n\nExample : ${prefix + command} bernekellboy ganteng`
                 let anu = await store.chats.all().map(v => v.id)
                 m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
@@ -1021,28 +1299,28 @@ break
 		    await sleep(1500)
 		    let btn = [{
                                 "urlButton": {
-                                    "displayText": '📌「 BLOG 」',
-                                    "url": 'https://koleksibot.blogspot.com/'
+                                    "displayText": 'W E B S I T E',
+                                    "url": 'https://rootsec.xyz/'
                                 }
                             }, {
                                 "urlButton": {
-                                    "displayText": '📍「 INSTAGRAM 」',
+                                    "displayText": 'I N S T A G R A M ',
                                     "phoneNumber": 'https://instagram.com/bernekellboy_'
                                 }
                             }, {
                                 "quickReplyButton": {
-                                    "displayText": 'Status Bot',
+                                    "displayText": 'PING',
                                     "id": 'ping'
                                 }
                             }, {
                                 "quickReplyButton": {
-                                    "displayText": 'Owner',
+                                    "displayText": 'OWNER',
                                     "id": 'owner'
                                 }  
                             }, {
                                 "quickReplyButton": {
-                                    "displayText": 'Script',
-                                    "id": 'sc'
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
                                 }
                             }]
                       nekellgans = fs.readFileSync('./lib/nekell.jpg')
@@ -1119,9 +1397,9 @@ break
             break 
             case 'smeme': case 'stickermeme': case 'stickmeme': {
 let { TelegraPh } = require('./lib/uploader')
-if (!text) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
-if (text.includes('|')) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
-if (!/image/.test(mime)) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Yahaha Tepod*`)
+if (!text) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
+if (text.includes('|')) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
+if (!/image/.test(mime)) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Yahaha Tepod*`)
 m.reply(mess.wait)
 arg = args.join(' ')
 mee = await nekell.downloadAndSaveMediaMessage(quoted)
@@ -1133,9 +1411,9 @@ await fs.unlinkSync(memek)
 break
 case 'memegen': case 'smeme2': {
 let { TelegraPh } = require('./lib/uploader')
-if (!text) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Udah mah jelek tepos|banyak batt gaya nya*`)
-if (!text.includes('|')) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Bernekell|Boy*`)
-if (!/image/.test(mime)) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Bernekell|Boy*`)
+if (!text) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Udah mah jelek tepos|banyak batt gaya nya*`)
+if (!text.includes('|')) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Bernekell|Boy*`)
+if (!/image/.test(mime)) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *Bernekell|Boy*`)
 m.reply(mess.wait)
 arg = args.join(' ')
 atas = arg.split('|')[0]
@@ -1293,7 +1571,7 @@ break
             }
             break
         case 'google': {
-                if (!text) throw `Example : ${prefix + command} fatih arridho`
+                if (!text) throw `Example : ${prefix + command} Hacked By Nekell404.`
                 let google = require('google-it')
                 google({'query': text}).then(res => {
                 let teks = `Google Search From : ${text}\n\n`
@@ -1415,7 +1693,140 @@ break
                 m.reply(mess.wait)
                 nekell.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/anime/'+command, 'apikey') }, caption: `Download From ${text}` }, { quoted: m})
             }
+            break 
+            case 'webtonsearch': case 'webtoon':
+                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
+                await m.reply(mess.wait())
+                kell.Webtoons(q).then(async data => {
+                    let txt = `*------「 WEBTOONS-SEARCH 」------*\n\n`
+                    for (let i of data) {
+                        txt += `*📫 Title :* ${i.judul}\n`
+                        txt += `*👍🏻 Like :* ${i.like}\n`
+                        txt += `*🤴🏻 Creator :* ${i.creator}\n`
+                        txt += `*🎥 Genre :* ${i.genre}\n`
+                        txt += `*📚 Url :* ${i.url}\n ----------------------------------------------------------\n`
+                    }
+                    await m.reply(txt)
+                })
+                .catch((err) => {
+                    m.reply(mess.err())
+                })
             break
+            case 'drakor':
+                if (!q) return m.reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
+                await m.reply(mess.wait())
+                kell.Drakor(q).then(async data => {
+                    let txt = `*-----「 DRAKOR-SEARCH 」-----*\n\n`
+                    for (let i of data) {
+                        txt += `*📫 Title :* ${i.judul}\n`
+                        txt += `*📆 Years :* ${i.years}\n`
+                        txt += `*🎥 Genre :* ${i.genre}\n`
+                        txt += `*📚 Url :* ${i.url}\n-----------------------------------------------------\n`
+                    }
+                    await sendFileFromUrl(from,data[0].thumbnail,txt,m)
+                })
+                .catch((err) => {
+                    m.reply(mess.err())
+                })
+            break
+            case 'anime':
+                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
+                await m.reply(mess.wait())
+                kell.Anime(q).then(async data => {
+                    let txt = `*-------「 ANIME-SEARCH 」-------*\n\n`
+                    for (let i of data) {
+                        txt += `*📫 Title :* ${i.judul}\n`
+                        txt += `*📚 Url :* ${i.link}\n-----------------------------------------------------\n`
+                    }
+                    await sendFileFromUrl(from,data[0].thumbnail,txt,m)
+                })
+                .catch((err) => {
+                    m.reply(mess.err())
+                })
+            break
+            case 'character': case 'karakter':
+                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
+                await m.reply(mess.wait())
+                kell.Character(q).then(async data => {
+                    let txt = `*---「 CHARACTER-SEARCH 」---*\n\n`
+                    for (let i of data) {
+                        txt += `*📫 Character :* ${i.character}\n`
+                        txt += `*📚 Url :* ${i.link}\n-----------------------------------------------------\n`
+                    }
+                    await sendFileFromUrl(from,data[0].thumbnail,txt,m)
+                })
+                .catch((err) => {
+                    m.reply(mess.err())
+                })
+            break
+            case 'manga':
+                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
+                await m.reply(mess.wait())
+                kell.Manga('naruto').then(async data => {
+                    let txt = `*------「 MANGA-SEARCH 」------*\n\n`
+                    for (let i of data) {
+                         txt += `*📫 Title :* ${i.judul}\n`
+                         txt += `*📚 Url :* ${i.link}\n-----------------------------------------------------\n`
+                    }
+                    await sendFileFromUrl(from,data[0].thumbnail,txt,m)
+                })
+                .catch((err) => {
+                    m.reply(mess.err())
+                })
+            break
+            case 'film':
+                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
+                await m.reply(mess.wait())
+                kell.Film(q).then(async data => {
+                    let txt = `*--------「 FILM-SEARCH 」--------*\n\n`
+                    for (let i of data) {
+                        txt += `*📫 Title :* ${i.judul}\n`
+                        txt += `*🎞️ Type :* ${i.type}\n`
+                        txt += `*📟 Quality :* ${i.quality}\n`
+                        txt += `*📮Upload :* ${i.upload}\n`
+                        txt += `*📚 Url :* ${i.link}\n-----------------------------------------------------\n`
+                    }
+                    await sendFileFromUrl(from,data[0].thumb,txt,m)
+                })
+                .catch((err) => {
+                    m.reply(mess.err())
+                })
+                    break
+            case 'twtdl': case 'twt': case 'twitterdl': case 'twitter':
+                if (!q) return reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
+                if (!isUrl(q)) return m.reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
+                if (!q.includes('twitter.com')) return m.reply(Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*)
+                await m.reply(mess.wait())
+                kell.Twitter(`${q}`).then(async data => {
+                    let txt = `*----「 TWITTER DOWNLOADER 」----*\n\n`
+                    txt += `*📫 Title :* ${data.title}\n`
+                    txt += `*📟 Quality :* ${data.medias[1].quality}\n`
+                    txt += `*💾 Size :* ${data.medias[1].formattedSize}\n`
+                    txt += `*📚 Url :* ${data.url}`
+                    sendFileFromUrl(from,data.medias[1].url,txt,m)
+                })
+                .catch((err) => {
+                    m.reply(mess.err())
+                })
+            break
+            case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'waifu':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
+					m.reply(mess.wait)
+					axios.get(`https://api.waifu.pics/sfw/${command}`)
+					.then(({data}) => {
+						nekell.sendMediaAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
+
+
+					})
+					break
+				case 'waifu': case 'loli':
+					m.reply(mess.wait)
+					axios.get(`https://api.waifu.pics/sfw/waifu`)
+					.then(({data}) => {
+					nekell.sendMediaAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
+
+
+					})
+					break
 	    case 'couple': {
                 m.reply(mess.wait)
                 let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
@@ -1537,7 +1948,7 @@ break
             }
             break
             case 'ramalanjodoh': case 'ramaljodoh': {
-                if (!text) throw `Example : ${prefix + command} Nekell, 19, 1, 2004, Ayang, 19, 1, 2004`
+                if (!text) throw `Example : ${prefix + command} nekell, 19, 1, 2004, Ayang, 19, 1, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1545,7 +1956,7 @@ break
             }
             break
             case 'ramalanjodohbali': case 'ramaljodohbali': {
-                if (!text) throw `Example : ${prefix + command} Nekell, 19, 1, 2004, Ayang, 19, 1, 2004`
+                if (!text) throw `Example : ${prefix + command} nekell, 19, 1, 2004, Ayang, 19, 1, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh_bali(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1553,7 +1964,7 @@ break
             }
             break
             case 'suamiistri': {
-                if (!text) throw `Example : ${prefix + command} Nekell, 19, 1, 2004, Ayang, 19, 1, 2004`
+                if (!text) throw `Example : ${prefix + command} nekell, 19, 1, 2004, Ayang, 19, 1, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.suami_istri(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1561,7 +1972,7 @@ break
             }
             break
             case 'ramalancinta': case 'ramalcinta': {
-                if (!text) throw `Example : ${prefix + command} Nekell, 19, 1, 2004, Ayang, 19, 1, 2004`
+                if (!text) throw `Example : ${prefix + command} nekell, 19, 1, 2004, Ayang, 19, 1, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_cinta(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1576,7 +1987,7 @@ break
             }
             break
             case 'kecocokannama': case 'cocoknama': {
-                if (!text) throw `Example : ${prefix + command} Nekell, 19, 1, 2004`
+                if (!text) throw `Example : ${prefix + command} nekell, 19, 1, 2004`
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.kecocokan_nama(nama, tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1584,7 +1995,7 @@ break
             }
             break
             case 'kecocokanpasangan': case 'cocokpasangan': case 'pasangan': {
-                if (!text) throw `Example : ${prefix + command} Nekell|Ayang`
+                if (!text) throw `Example : ${prefix + command} nekell|Ayang`
                 let [nama1, nama2] = text.split`|`
                 let anu = await primbon.kecocokan_nama_pasangan(nama1, nama2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1600,7 +2011,7 @@ break
             }
             break
             case 'sifatusaha': {
-                if (!ext)throw `Example : ${prefix+ command} 28, 12, 2021`
+                if (!text)throw `Example : ${prefix+ command} 28, 12, 2021`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_usaha_bisnis(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1648,7 +2059,7 @@ break
             }
             break
             case 'fengshui': {
-                if (!text) throw `Example : ${prefix + command} Nekell, 1, 2004\n\nNote : ${prefix + command} Nama, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`
+                if (!text) throw `Example : ${prefix + command} nekell, 1, 2004\n\nNote : ${prefix + command} Nama, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`
                 let [nama, gender, tahun] = text.split`,`
                 let anu = await primbon.perhitungan_feng_shui(nama, gender, tahun)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1696,7 +2107,7 @@ break
             }
             break
             case 'peruntungan': {
-                if (!text) throw `Example : ${prefix + command} Nekell, 19, 1, 2004, 2022\n\nNote : ${prefix + command} Nama, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`
+                if (!text) throw `Example : ${prefix + command} nekell, 19, 1, 2004, 2022\n\nNote : ${prefix + command} Nama, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`
                 let [nama, tgl, bln, thn, untuk] = text.split`,`
                 let anu = await primbon.ramalan_peruntungan(nama, tgl, bln, thn, untuk)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1720,7 +2131,7 @@ break
             }
             break
             case 'keberuntungan': {
-                if (!text) throw `Example : ${prefix + command} Nekell, 19, 1, 2004`
+                if (!text) throw `Example : ${prefix + command} nekell, 19, 1, 2004`
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.potensi_keberuntungan(nama, tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1838,7 +2249,7 @@ break
                 let msg = await nekell.sendMessage(m.chat, buttonMessage, { quoted: m })
 		let { toAudio } = require('./lib/converter')
 		let nganu = await getBuffer(anu.result.nowatermark)
-		let cnvrt = await toAudio(nganu, 'mp4')
+		let cnvrt = await toAudio(nganu, 'mp3')
                 nekell.sendMessage(m.chat, { audio: cnvrt, mimetype: 'audio/mpeg'}, { quoted: msg })
             }
             break
@@ -2271,6 +2682,9 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 }
                 break
             }
+            case 'tes': case 'runtime':
+            m.reply(`🔹Runtime : ${runtime(process.uptime())}`)
+            break
             case 'public': {
                 if (!isCreator) throw mess.owner
                 nekell.public = true
@@ -2329,58 +2743,1108 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 `.trim()
                 m.reply(respon)
             }
-            break
-            case 'owner': case 'creator': case 'nekell': {
-                nekell.sendContact(m.chat, global.owner, m)
+            break 
+            case 'menu': case 'list': case '?': {
+                anu = `╭─────[ *MENU SIMPEL HERE!* ]─────✧
+                │➸ Hallo ${pushname} Saya ${botname} Kamu Bisa Memakai Bot Sesuka Hati Dengan Mengetik *${prefix}menu*\n\n\n│➸ Memakailah Dengan Sabar Dan Tidak Mengspam.
+ ` 
+                  let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'W E B S I T E',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'ALLMENU',
+                                    "id": 'allmenu'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SEWA',
+                                    "id": 'sewa'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'groupmenu': case 'grupmenu': {
+                anu = `┌──⭓ *Group Menu*
+│
+│⭔ ${prefix}linkgroup
+│⭔ ${prefix}ephemeral [option]
+│⭔ ${prefix}setppgc [image]
+│⭔ ${prefix}setname [text]
+│⭔ ${prefix}setdesc [text]
+│⭔ ${prefix}group [option]
+│⭔ ${prefix}editinfo [option]
+│⭔ ${prefix}add @user
+│⭔ ${prefix}kick @user
+│⭔ ${prefix}hidetag [text]
+│⭔ ${prefix}tagall [text]
+│⭔ ${prefix}promote @user
+│⭔ ${prefix}demote @user
+│⭔ ${prefix}vote [text]
+│⭔ ${prefix}devote
+│⭔ ${prefix}upvote
+│⭔ ${prefix}cekvote
+│⭔ ${prefix}hapusvote
+│
+└───────⭓
+🔹 ${ownername} 
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'RUNTIME',
+                                    "id": 'runtime'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'downloadermenu': {
+                anu = `┌──⭓ *Downloader Menu*
+│
+│⭔ ${prefix}tiktoknowm [url]
+│⭔ ${prefix}tiktokwm [url]
+│⭔ ${prefix}tiktokmp3 [url]
+│⭔ ${prefix}instagram [url]
+│⭔ ${prefix}twitter [url]
+│⭔ ${prefix}twittermp3 [url]
+│⭔ ${prefix}facebook [url]
+│⭔ ${prefix}pinterestdl [url]
+│⭔ ${prefix}ytmp3 [url]
+│⭔ ${prefix}ytmp4 [url]
+│⭔ ${prefix}getmusic [query]
+│⭔ ${prefix}getvideo [query]
+│⭔ ${prefix}umma [url]
+│⭔ ${prefix}joox [query]
+│⭔ ${prefix}soundcloud [url]
+│
+└───────⭓
+🔹 ${ownername}
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'PING',
+                                    "id": 'ping'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SEWA',
+                                    "id": 'sewa'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'searchmenu': {
+                anu = `┌──⭓ *Search Menu*
+│
+│⭔ ${prefix}play [query]
+│⭔ ${prefix}yts [query]
+│⭔ ${prefix}google [query]
+│⭔ ${prefix}gimage [query]
+│⭔ ${prefix}pinterest [query]
+│⭔ ${prefix}wallpaper [query]
+│⭔ ${prefix}wikimedia [query]
+│⭔ ${prefix}ytsearch [query]
+│⭔ ${prefix}ringtone [query]
+│
+└───────⭓
+🔹 ${ownername}
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'RUNTIME',
+                                    "id": 'runtime'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'randommenu': {
+                anu = `┌──⭓ *Random Menu*
+│
+│⭔ ${prefix}coffe
+│⭔ ${prefix}quotesanime
+│⭔ ${prefix}motivasi
+│⭔ ${prefix}dilanquote
+│⭔ ${prefix}bucinquote
+│⭔ ${prefix}katasenja
+│⭔ ${prefix}puisi
+│⭔ ${prefix}couple
+│⭔ ${prefix}anime
+│⭔ ${prefix}waifu
+│⭔ ${prefix}loli
+│⭔ ${prefix}neko
+│⭔ ${prefix}shinobu
+│⭔ ${prefix}megumin
+│⭔ ${prefix}quotedilan
+└───────⭓
+🔹 ${ownername}
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'PING',
+                                    "id": 'ping'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SEWA',
+                                    "id": 'sewa'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'textpro': case 'textpromenu': {
+                anu = `┌──⭓ *Text Pro Menu*
+│
+│⭔ ${prefix}3dchristmas
+│⭔ ${prefix}3ddeepsea
+│⭔ ${prefix}americanflag
+│⭔ ${prefix}3dscifi
+│⭔ ${prefix}3drainbow
+│⭔ ${prefix}3dwaterpipe
+│⭔ ${prefix}halloweenskeleton
+│⭔ ${prefix}sketch
+│⭔ ${prefix}bluecircuit
+│⭔ ${prefix}space
+│⭔ ${prefix}metallic
+│⭔ ${prefix}fiction
+│⭔ ${prefix}greenhorror
+│⭔ ${prefix}transformer
+│⭔ ${prefix}berry
+│⭔ ${prefix}thunder
+│⭔ ${prefix}magma
+│⭔ ${prefix}3dcrackedstone
+│⭔ ${prefix}3dneonlight
+│⭔ ${prefix}impressiveglitch
+│⭔ ${prefix}naturalleaves
+│⭔ ${prefix}fireworksparkle
+│⭔ ${prefix}matrix
+│⭔ ${prefix}dropwater
+│⭔ ${prefix}harrypotter
+│⭔ ${prefix}foggywindow
+│⭔ ${prefix}neondevils
+│⭔ ${prefix}christmasholiday
+│⭔ ${prefix}3dgradient
+│⭔ ${prefix}blackpink
+│⭔ ${prefix}gluetext
+│
+└───────⭓
+🔹 ${ownername}
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SCRIPT',
+                                    "id": 'sc'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'photooxy': case 'photooxymenu': {
+                anu = `┌──⭓ *Photo Oxy Menu*
+│
+│⭔ ${prefix}shadow
+│⭔ ${prefix}romantic
+│⭔ ${prefix}smoke
+│⭔ ${prefix}burnpapper
+│⭔ ${prefix}naruto
+│⭔ ${prefix}lovemsg
+│⭔ ${prefix}grassmsg
+│⭔ ${prefix}lovetext
+│⭔ ${prefix}coffecup
+│⭔ ${prefix}butterfly
+│⭔ ${prefix}harrypotter
+│⭔ ${prefix}retrolol
+│
+└───────⭓
+🔹 ${ownername}
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'PING',
+                                    "id": 'ping'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'ephoto': case 'ephotomenu': {
+            ┌──⭓ *Ephoto Menu*
+│
+│⭔ ${prefix}ffcover
+│⭔ ${prefix}crossfire
+│⭔ ${prefix}galaxy
+│⭔ ${prefix}glass
+│⭔ ${prefix}neon
+│⭔ ${prefix}beach
+│⭔ ${prefix}blackpink
+│⭔ ${prefix}igcertificate
+│⭔ ${prefix}ytcertificate
+│
+└───────⭓
+🔹 ${ownername}
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'GCBOT',
+                                    "id": 'gcbot'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SEWA',
+                                    "id": 'sewa'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'funmenu': {
+┌──⭓ *Fun Menu*
+│
+│⭔ ${prefix}twitterdl
+│⭔ ${prefix}film
+│⭔ ${prefix}manga
+│⭔ ${prefix}anime
+│⭔ ${prefix}drakor
+│⭔ ${prefix}webtonsearch
+│⭔ ${prefix}halah
+│⭔ ${prefix}hilih
+│⭔ ${prefix}huluh
+│⭔ ${prefix}heleh
+│⭔ ${prefix}holoh
+│⭔ ${prefix}jadian
+│⭔ ${prefix}jodohku
+│⭔ ${prefix}delttt
+│⭔ ${prefix}tictactoe
+│⭔ ${prefix}family100
+│⭔ ${prefix}tebak [option]
+│⭔ ${prefix}math [mode]
+│⭔ ${prefix}suitpvp [@tag]
+│
+└───────⭓
+🔹 ${ownername}
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'PING',
+                                    "id": 'ping'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SCRIPT',
+                                    "id": 'sc'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'primbonmenu': {
+┌──⭓ *Primbon Menu*
+│
+│⭔ ${prefix}nomorhoki
+│⭔ ${prefix}artimimpi
+│⭔ ${prefix}artinama
+│⭔ ${prefix}ramaljodoh
+│⭔ ${prefix}ramaljodohbali
+│⭔ ${prefix}suamiistri
+│⭔ ${prefix}ramalcinta
+│⭔ ${prefix}cocoknama
+│⭔ ${prefix}pasangan
+│⭔ ${prefix}jadiannikah
+│⭔ ${prefix}sifatusaha
+│⭔ ${prefix}rezeki
+│⭔ ${prefix}pekerjaan
+│⭔ ${prefix}nasib
+│⭔ ${prefix}penyakit
+│⭔ ${prefix}tarot
+│⭔ ${prefix}fengshui
+│⭔ ${prefix}haribaik
+│⭔ ${prefix}harisangar
+│⭔ ${prefix}harisial
+│⭔ ${prefix}nagahari
+│⭔ ${prefix}arahrezeki
+│⭔ ${prefix}peruntungan
+│⭔ ${prefix}weton
+│⭔ ${prefix}karakter
+│⭔ ${prefix}keberuntungan
+│⭔ ${prefix}memancing
+│⭔ ${prefix}masasubur
+│⭔ ${prefix}zodiak
+│⭔ ${prefix}shio
+│
+└───────⭓
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SCRIPT',
+                                    "id": 'sc'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'convertmenu': {
+            anu = `┌──⭓ *Convert Menu*
+│
+│⭔ ${prefix}toimage
+│⭔ ${prefix}removebg
+│⭔ ${prefix}smeme
+│⭔ ${prefix}memegen
+│⭔ ${prefix}sticker
+│⭔ ${prefix}emojimix
+│⭔ ${prefix}tovideo
+│⭔ ${prefix}togif
+│⭔ ${prefix}tourl
+│⭔ ${prefix}tovn
+│⭔ ${prefix}tomp3
+│⭔ ${prefix}toaudio
+│⭔ ${prefix}ebinary
+│⭔ ${prefix}dbinary
+│⭔ ${prefix}styletext
+│
+└───────⭓
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'RUNTIME',
+                                    "id": 'runtime'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'mainmenu': {
+                anu = `┌──⭓ *Main Menu*
+│
+│⭔ ${prefix}ping
+│⭔ ${prefix}owner
+│⭔ ${prefix}menu / ${prefix}help / ${prefix}?
+│⭔ ${prefix}delete
+│⭔ ${prefix}infochat
+│⭔ ${prefix}quoted
+│⭔ ${prefix}listpc
+│⭔ ${prefix}listgc
+│⭔ ${prefix}listonline
+│
+└───────⭓
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SEWA',
+                                    "id": 'sewa'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'databasemenu': {
+                anu = `┌──⭓ *Database Menu*
+│
+│⭔ ${prefix}setcmd
+│⭔ ${prefix}listcmd
+│⭔ ${prefix}delcmd
+│⭔ ${prefix}lockcmd
+│⭔ ${prefix}addmsg
+│⭔ ${prefix}listmsg
+│⭔ ${prefix}getmsg
+│⭔ ${prefix}delmsg
+│
+└───────⭓
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'PING',
+                                    "id": 'ping'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'GCBOT',
+                                    "id": 'gcbot'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'anonymousmenu': {
+                anu = `┌──⭓ *Anonymous Menu*
+│
+│⭔ ${prefix}anonymous
+│⭔ ${prefix}start
+│⭔ ${prefix}next
+│⭔ ${prefix}keluar
+│⭔ ${prefix}sendkontak
+│
+└───────⭓
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'RUNTIME',
+                                    "id": 'runtime'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'islamicmenu': {
+                anu = `┌──⭓ *Islamic Menu*
+│
+│⭔ ${prefix}iqra
+│⭔ ${prefix}hadist
+│⭔ ${prefix}alquran
+│⭔ ${prefix}juzamma
+│⭔ ${prefix}tafsirsurah
+│
+└───────⭓
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'PING',
+                                    "id": 'ping'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'voicemenu': {
+                anu = `┌──⭓ *Voice Changer*
+│
+│⭔ ${prefix}bass
+│⭔ ${prefix}blown
+│⭔ ${prefix}deep
+│⭔ ${prefix}earrape
+│⭔ ${prefix}fast
+│⭔ ${prefix}fat
+│⭔ ${prefix}nightcore
+│⭔ ${prefix}reverse
+│⭔ ${prefix}robot
+│⭔ ${prefix}slow
+│⭔ ${prefix}tupai
+│
+└───────⭓
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'RUNTIME',
+                                    "id": 'runtime'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SCRIPT',
+                                    "id": 'sc'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'animemenu': {
+                anu = `╭─❒ *Random Anime*
+├ ${prefix}loli
+├ ${prefix}neko
+├ ${prefix}waifu
+├ ${prefix}shinobu
+├ ${prefix}megumin
+├ ${prefix}bully
+├ ${prefix}cuddle
+├ ${prefix}cry
+├ ${prefix}hug
+├ ${prefix}awoo
+├ ${prefix}kiss
+├ ${prefix}lick
+├ ${prefix}pat
+├ ${prefix}smug
+├ ${prefix}bonk
+├ ${prefix}yeet
+├ ${prefix}blush
+├ ${prefix}smile
+├ ${prefix}wave
+├ ${prefix}highfive
+├ ${prefix}handhold
+├ ${prefix}nom
+├ ${prefix}bite
+├ ${prefix}glomp
+├ ${prefix}slap
+├ ${prefix}kill
+├ ${prefix}happy
+├ ${prefix}wink
+├ ${prefix}poke
+├ ${prefix}dance
+╰❒ ${prefix}cringe
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'SEWA',
+                                    "id": 'sewa'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'ownermenu': {
+                anu = `┌──⭓ *Owner Menu*
+│
+│⭔ ${prefix}chat [option]
+│⭔ ${prefix}join [link]
+│⭔ ${prefix}leave
+│⭔ ${prefix}block @user
+│⭔ ${prefix}unblock @user
+│⭔ ${prefix}bcgroup [text]
+│⭔ ${prefix}bcall [text]
+│⭔ ${prefix}setppbot [image]
+│
+└───────⭓
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'PING',
+                                    "id": 'ping'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break 
+            case 'tamparanquote': {
+                anu = `┌──⭓ *Tamparan Quote*
+│
+│⭔ ${prefix}motivasi
+│⭔ ${prefix}dilanquote
+│⭔ ${prefix}bucinquote
+│⭔ ${prefix}katasenja
+│⭔ ${prefix}puisi
+│
+└───────⭓
+`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                "urlButton": {
+                                    "displayText": 'B L O G G E R',
+                                    "url": 'https://www.rootsec.xyz/'
+                                }
+                            }, {
+                                "urlButton": {
+                                    "displayText": 'I N S T A G R A M',
+                                    "url": 'https://instagram.com/bernekellboy_'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'PING',
+                                    "id": 'ping'
+                                }
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'OWNER',
+                                    "id": 'owner'
+                                }  
+                            }, {
+                                "quickReplyButton": {
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
-            case 'list': case 'help': case '?': case 'menu': {
-                anu = `┌──⭓ *「 BERNEKELLBOT 」*
- Hai Orang Yang Paling Beban ${pushname} 🗿 Saya ${botname} Ada Yang Bisa Saya Bantu?.
-
+            case 'allmenu': {
+                anu = `┌──⭓ *「🔹 ALL MENU HERE 🔹」*
+                
 │📍 Si Beban: ${pushname}
 │📍 Creator : ${ownername}
 │📍 Prefix  : ${prefix}
 │📍 Owner   : ${ownernumber}
 │📍 Quotes  : ${quotes}
-
-「 O p e n  S e w a  B o t  ! 」
-╭─❒ 「 Sewa Bot Untuk Kebutuhan 」🤖
-├ LIST HARGA IN HERE! 👇
-├ 
-├ 1 BULAN : 15K
-├ 2 MINGGU : 10K
-├
-├ *NOTE : INI BELUM TERMASUK MENJADI MEMBER PREMIUM!*
-╰❒ 「 📍 BANG KENAPA KOK MAHAL? YA KARNA KALO BOT ITU GAMPANG KE BANNED OLEH WHATSAPP! 📍 」
-
-「  O p e n  R u n  B o t  !  」
-╭─❒ 「 Run Bot Untuk Nyantai 」🚬
-├ LIST HARGA IN HERE! 👇
-├
-├ 1 MINGGU : 10K
-├ 1 BULAN : 20K
-├ PERMANENT : BISA DI BICARAKAN DENGAN OWNER!
-├
-├ *NOTE : UNTUK SCRIPT BISA DARI ELU ATAU PAKE SC GW ATAU BEBAS!*
-╰❒ 「 📌 JIKA DELAY ATAUPUN TIDAK MERESPON MUNGKIN KENDALA JARINGAN!📌 」
-
-「 O p e n  P e m b u a t a n  L o g o ! 」
-╭─❒ 「 Logo 」🎨
-├ LOGO UNTUK TEAM ESPORT
-├ LOGO UNTUK PRIBADI
-├ LOGO UNTUK YOUTUBE
-├ LOGO UNTUK FB
-├ LOGO UNTUK JB
-├ LOGO UNTUK WA
-├ LOGO UNTUK IG
-├ LOGO UNTUK SERTIFIKAT GAME
-├ LOGO UNTUK WM EDIT
-├
-├ *NOTE : UNTUK HARGA TERGANTUNG LOGO. UNTUK WAKTU PEMBUATAN NYA 10-30 MENIT TERGANTUNG LOGO. DAN MOHON UNTUK TIDAK MENGSPAM KETIKA PEMBUATAN
-BELUM MELEBIHI BATAS WAKTU!!.*
-╰❒ 「 💠JIKA DI ATAS TIDAK ADA YANG KALIAN CARI SILAHKAN HUBUNGI OWNER UNTUK MENANYAKAN! DAN MOHON UNTUK TIDAK SPAM OWNER KARNA AKAN BERAKIBAT KALIAN TERBLOK PERMANENT💠 」
-• *Link Grup Official Bernekellbot* : https://chat.whatsapp.com/J4ii7zkiySP9s6xdlZDggp
 
 ┌──⭓ *Group Menu*
 │
@@ -2451,7 +3915,7 @@ BELUM MELEBIHI BATAS WAKTU!!.*
 │⭔ ${prefix}couple
 │⭔ ${prefix}anime
 │⭔ ${prefix}waifu
-│⭔ ${prefix}husbu
+│⭔ ${prefix}loli
 │⭔ ${prefix}neko
 │⭔ ${prefix}shinobu
 │⭔ ${prefix}megumin
@@ -2527,6 +3991,12 @@ BELUM MELEBIHI BATAS WAKTU!!.*
 
 ┌──⭓ *Fun Menu*
 │
+│⭔ ${prefix}twitterdl
+│⭔ ${prefix}film
+│⭔ ${prefix}manga
+│⭔ ${prefix}anime
+│⭔ ${prefix}drakor
+│⭔ ${prefix}webtonsearch
 │⭔ ${prefix}halah
 │⭔ ${prefix}hilih
 │⭔ ${prefix}huluh
@@ -2661,6 +4131,39 @@ BELUM MELEBIHI BATAS WAKTU!!.*
 │
 └───────⭓
 
+╭─❒ *Random Anime*
+├ ${prefix}loli
+├ ${prefix}neko
+├ ${prefix}waifu
+├ ${prefix}shinobu
+├ ${prefix}megumin
+├ ${prefix}bully
+├ ${prefix}cuddle
+├ ${prefix}cry
+├ ${prefix}hug
+├ ${prefix}awoo
+├ ${prefix}kiss
+├ ${prefix}lick
+├ ${prefix}pat
+├ ${prefix}smug
+├ ${prefix}bonk
+├ ${prefix}yeet
+├ ${prefix}blush
+├ ${prefix}smile
+├ ${prefix}wave
+├ ${prefix}highfive
+├ ${prefix}handhold
+├ ${prefix}nom
+├ ${prefix}bite
+├ ${prefix}glomp
+├ ${prefix}slap
+├ ${prefix}kill
+├ ${prefix}happy
+├ ${prefix}wink
+├ ${prefix}poke
+├ ${prefix}dance
+╰❒ ${prefix}cringe
+
 ┌──⭓ *Owner Menu*
 │
 │⭔ ${prefix}chat [option]
@@ -2674,15 +4177,14 @@ BELUM MELEBIHI BATAS WAKTU!!.*
 │
 └───────⭓
 
-┌──⭓ *Thanks To*
+┌──⭓ *Tamparan Quote*
 │
-│📌 AhmadChenDev : ${ahmad}
-│📌 Fatih Arridho : ${fatih}
-│📌 Ameliavoss : ${ameliavoss}
-│📌 ${allfriend}
+│⭔ ${prefix}motivasi
+│⭔ ${prefix}dilanquote
+│⭔ ${prefix}bucinquote
+│⭔ ${prefix}katasenja
+│⭔ ${prefix}puisi
 │
-│🏴‍☠️ Jangan Lupa Donasi Agar Bot Bisa Selalu On Tiap Hari,Tiap Jam,Tiap Menit,Tiap Detik.
-「 BERBIJAK LAH DALAM MENGGUNAKAN SESUATU🔥 」
 └───────⭓
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
@@ -2694,7 +4196,7 @@ BELUM MELEBIHI BATAS WAKTU!!.*
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://koleksibot.blogspot.com/'
+                                    "url": 'https://www.rootsec.xyz/'
                                 }
                             }, {
                                 "urlButton": {
@@ -2703,18 +4205,18 @@ BELUM MELEBIHI BATAS WAKTU!!.*
                                 }
                             }, {
                                 "quickReplyButton": {
-                                    "displayText": 'Status Bot',
-                                    "id": 'ping'
+                                    "displayText": 'SCRIPT',
+                                    "id": 'sc'
                                 }
                             }, {
                                 "quickReplyButton": {
-                                    "displayText": 'Owner',
+                                    "displayText": 'OWNER',
                                     "id": 'owner'
                                 }  
                             }, {
                                 "quickReplyButton": {
-                                    "displayText": 'Script',
-                                    "id": 'sc'
+                                    "displayText": 'DONASI',
+                                    "id": 'donasi'
                                 }
                             }]
                         }
