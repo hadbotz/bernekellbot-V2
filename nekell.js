@@ -1565,7 +1565,7 @@ break
                 let teks = 'YouTube Search\n\n Result From '+text+'\n\n'
                 let no = 1
                 for (let i of search.all) {
-                    teks += `⭔ No : ${no++}\n⭔ Type : ${i.type}\n⭔ Video ID : ${i.videoId}\n⭔ Title : ${i.title}\n⭔ Views : ${i.views}\n⭔ Duration : ${i.timestamp}\n⭔ Upload At : ${i.ago}\n⭔ Author : ${i.author.name}\n⭔ Url : ${i.url}\n\n─────────────────\n\n`
+                    teks += `⭔ No : ${no++}\n⭔ Type : ${i.type}\n⭔ Video ID : ${i.videoId}\n⭔ Title : ${i.title}\n⭔ Views : ${i.views}\n⭔ Duration : ${i.timestamp}\n⭔ Upload At : ${i.ago}\n⭔ Author : ${i.author}\n⭔ Url : ${i.url}\n\n─────────────────\n\n`
                 }
                 nekell.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
             }
@@ -2629,6 +2629,10 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 m.reply(respon)
             }
             break 
+            case 'owner': case 'creator': case 'nekell': {
+                nekell.sendContact(m.chat, global.owner, m)
+            }
+            break
             case 'menu': case 'list': case '?': {
                 anu = `╭─────[ *MENU SIMPEL HERE!* ]─────✧
                 │➸ Hallo ${pushname} Saya ${botname} Kamu Bisa Memakai Bot Sesuka Hati Dengan Mengetik *${prefix}menu*\n\n\n│➸ Memakailah Dengan Sabar Dan Tidak Mengspam.
