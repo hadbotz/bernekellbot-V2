@@ -69,57 +69,6 @@ module.exports = nekell = async (nekell, m, chatUpdate, store) => {
     	const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
     	const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false 
     	
-    	
-    	try {
-            let isNumber = x => typeof x === 'number' && !isNaN(x)
-            let limitUser = isPremium ? global.limitawal.premium : global.limitawal.free
-            let user = global.db.data.users[m.sender]
-            if (typeof user !== 'object') global.db.data.users[m.sender] = {}
-            if (user) {
-                if (!isNumber(user.afkTime)) user.afkTime = -1
-                if (!('afkReason' in user)) user.afkReason = ''
-                if (!isNumber(user.limit)) user.limit = limitUser
-            } else global.db.data.users[m.sender] = {
-                afkTime: -1,
-                afkReason: '',
-                limit: limitUser,
-            }
-    
-            let chats = global.db.data.chats[m.chat]
-            if (typeof chats !== 'object') global.db.data.chats[m.chat] = {}
-            if (chats) {
-                if (!('mute' in chats)) chats.mute = false
-                if (!('antilink' in chats)) chats.antilink = false
-            } else global.db.data.chats[m.chat] = {
-                mute: false,
-                antilink: false,
-            }
-	    } catch (err) {
-            console.error(err)
-        }
-
-	
-        // Public & Self
-        if (!nekell.public) {
-            if (!m.key.fromMe) return
-        }
-
-        // Push Message To Console && Auto Read
-        if (m.message) {
-            nekell.sendReadReceipt(m.chat, m.sender, [m.key.id])
-            console.log(chalk.black(chalk.bgWhite('[ PESAN ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> Dari'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> Di'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
-        }
-	
-	// write database every 1 minute
-	setInterval(() => {
-            fs.writeFileSync('./src/database.json', JSON.stringify(global.db, null, 2))
-        }, 60 * 1000) 
-        
-        
-      // Mute Chat
-      if (db.data.chats[m.chat].mute && !isAdmins && !isCreator) {
-      return
-      }
 
         // Respon Cmd with media
         if (isMedia && m.msg.fileSha256 && (m.msg.fileSha256.toString('base64') in global.db.sticker)) {
