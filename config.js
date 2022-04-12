@@ -1,7 +1,7 @@
 /**
-   * Create By Dika Ardnt.
-   * Contact Me on wa.me/6288292024190
-   * Follow https://github.com/DikaArdnt
+   * Create By Bernekellboy
+   * Contact Me on wa.me/6289695073357
+   * Follow https://github.com/Bernekellboy
 */
 
 const fs = require('fs')
@@ -14,7 +14,7 @@ global.APIs = {
 
 // Apikey Website Api
 global.APIKeys = {
-	'https://zenzapi.xyz': '4909faeb3e93',
+	'https://zenzapi.xyz': 'a9a05974d30e','LuOlangNgentot',
 }
 
 // Other
@@ -23,24 +23,22 @@ global.ownernumber = 'wa.me/6289695073357'
 global.ownername = 'Bernekellboy🔥'
 global.botname = 'Bernekell-Bot🤖'
 global.packname = '© BERNEKELLBOT-MD'
-global.fatih = 'wa.me/6281382420312'
-global.ahmad = 'wa.me/6281515474080'
-global.ameliavoss = 'wa.me/6285215916046'
-global.allfriend = 'All My Friends And All Creator Bot Wangsap'
-global.quotes = '🔺Jangan pernah sombong dengan apa yang lu punya karna, itu semua hanyalah titipan yang akan hilang pada masa nya!.'
+global.facebook = 'Bernekellboy ID'
+global.allfriend = '📺 All My Friends And All Creator Bot Wangsap'
+global.quotes = '📜 Jadikan hinaan itu sebagai alasan lu agar semangat dan bisa untuk membuktikan bahwa lu bukaj seperti yang mereka kira!.'
 global.author = 'Ig : @bernekellboy_'
 global.sessionName = 'nekell'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    success: '✓ Success Sloerdddd',
-    admin: 'Fitur Khusus Admin Group!',
-    botAdmin: 'Bot Harus Menjadi Admin Terlebih Dahulu!',
-    owner: 'Fitur Khusus Owner Bot',
-    group: 'Fitur Digunakan Hanya Untuk Group!',
-    private: 'Fitur Digunakan Hanya Untuk Private Chat!',
-    bot: 'Fitur Khusus Pengguna Nomor Bot',
-    wait: '⌛ Sabar Sloerddd Loading...',
+    success: '✅ Done Success',
+    admin: '❌Fitur Khusus Admin Group!',
+    botAdmin: '📢 Bot Harus Menjadi Admin Terlebih Dahulu!',
+    owner: '❌ Fitur Khusus Owner Bot',
+    group: '❌ Fitur Digunakan Hanya Untuk Group!',
+    private: '❌ Fitur Digunakan Hanya Untuk Private Chat!',
+    bot: '❌ Fitur Khusus Pengguna Nomor Bot',
+    wait: '⌛ Sabar Loading...',
 }
 global.thumb = fs.readFileSync('./lib/nekell.jpg')
 
