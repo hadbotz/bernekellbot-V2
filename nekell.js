@@ -326,12 +326,6 @@ klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] }
 	    
 	    
         switch(command) {
-	    case 'afk': {
-                let user = global.db.data.users[m.sender]
-                user.afkTime = + new Date
-                user.afkReason = text
-                m.reply(`${m.pushName} Telah Afk${text ? ': ' + text : ''}`)
-            }
         case 'ttc': case 'ttt': case 'tictactoe': {
             let TicTacToe = require("./lib/tictactoe")
             this.game = this.game ? this.game : {}
@@ -468,7 +462,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             case 'sewa': case 'sewabot': {
                 anu = `Hai ${m.pushName}*\n\n Bot Rental Prices\n⭔ 10K Per Group via Dana 1 Month\n⭔ 13K via pulsa 1 Month\n\n Premium Price Bot\n⭔ 15k per User 1 bulan\n\nPayment can be via Dana, Pulsa, Gopay\n\nFor more details, you can chat with the owner\nhttps://wa.me/6289695073357 (Owner)
 `
-            let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+            let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/sewa.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
@@ -507,9 +501,9 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
             case 'gcbot': case 'gc': {
-                anu = `https://chat.whatsapp.com/J4ii7zkiySP9s6xdlZDggp\n\nGroup Official Bernekellbot And All My Friends 
+                anu = `*│❏ https://chat.whatsapp.com/J4ii7zkiySP9s6xdlZDggp\n\nGroup Official Bernekellbot And All My Friends*
 `
-                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/gc.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
@@ -590,7 +584,7 @@ Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
 
 「 📍TERIMAKASIH UNTUK KALIAN USER RAMAH!📍 」
 `
-                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/rules.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
@@ -631,7 +625,7 @@ Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
 	    case 'donasi': case 'donate': {
                 anu = `*│➸ Donate For Me : \n\n⭔ Dana : 089695073357\n│➸ Saweria : https://saweria.co/nekellganss\n│➸ Pulsa : 081224413305
 `
-                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/donate.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
@@ -1725,27 +1719,6 @@ break
                 }
                 nekell.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
-            break 
-            case 'antilink': {
-                if (!m.isGroup) throw mess.group
-                if (!isBotAdmins) throw mess.botAdmin
-                if (!isAdmins) throw mess.admin
-                if (args[0] === "on") {
-                if (db.data.chats[m.chat].antilink) return m.reply(`Sudah Aktif Sebelumnya`)
-                db.data.chats[m.chat].antilink = true
-                m.reply(`Antilink Aktif !`)
-                } else if (args[0] === "off") {
-                if (!db.data.chats[m.chat].antilink) return m.reply(`Sudah Tidak Aktif Sebelumnya`)
-                db.data.chats[m.chat].antilink = false
-                m.reply(`Antilink Tidak Aktif !`)
-                } else {
-                 let buttons = [
-                        { buttonId: 'antilink on', buttonText: { displayText: 'On' }, type: 1 },
-                        { buttonId: 'antilink off', buttonText: { displayText: 'Off' }, type: 1 }
-                    ]
-                    await nekell.sendButtonText(m.chat, buttons, `Mode Antilink`, nekell.user.name, m)
-                }
-             }
              break 
              case 'setexif': {
                if (!isCreator) throw mess.owner
@@ -1755,27 +1728,6 @@ break
           m.reply(`Exif berhasil diubah menjadi\n\n⭔ Packname : ${global.packname}\n⭔ Author : ${global.author}`)
             }
             break
-             case 'mute': {
-                if (!m.isGroup) throw mess.group
-                if (!isBotAdmins) throw mess.botAdmin
-                if (!isAdmins) throw mess.admin
-                if (args[0] === "on") {
-                if (db.data.chats[m.chat].mute) return m.reply(`Sudah Aktif Sebelumnya`)
-                db.data.chats[m.chat].mute = true
-                m.reply(`${nekell.user.name} telah di mute di group ini !`)
-                } else if (args[0] === "off") {
-                if (!db.data.chats[m.chat].mute) return m.reply(`Sudah Tidak Aktif Sebelumnya`)
-                db.data.chats[m.chat].mute = false
-                m.reply(`${nekell.user.name} telah di unmute di group ini !`)
-                } else {
-                 let buttons = [
-                        { buttonId: 'mute on', buttonText: { displayText: 'On' }, type: 1 },
-                        { buttonId: 'mute off', buttonText: { displayText: 'Off' }, type: 1 }
-                    ]
-                    await nekell.sendButtonText(m.chat, buttons, `Mute Bot`, nekell.user.name, m)
-                }
-             }
-             break
             case 'wallpaper': {
                 if (!text) throw 'Masukkan Query Title'
 		let { wallpaper } = require('./lib/scraper')
@@ -2240,8 +2192,17 @@ break
                     for (let media of anu.data) nekell.sendMedia(m.chat, media, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
                 } else if (/\/stories\/([^\s&]+)/.test(isUrl(text)[0])) {
                     let anu = await fetchJson(api('zenz', '/downloader/instastory', { url: isUrl(text)[0] }, 'apikey'))
-                    nekell.sendFile(m.chat, anu.media[0].url, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
+                    nekell.sendMedia(m.chat, anu.media[0].url, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
                 }
+            }
+            break
+		/** Backup misal yg atas ga keluar video **/
+		case 'igeh': case 'instagram2': case 'ig2': case 'igdl2': {
+                if (!text) throw 'Masukkan Query Link!'
+                m.reply(mess.wait)
+                
+                let anu = await fetchJson(api('zenz', '/downloader/instagram2', { url:text }, 'apikey'))
+                nekell.sendMessage(m.chat, { video: { url: anu.data[0] } }, { quoted: m })
             }
             break
             case 'joox': case 'jooxdl': {
@@ -2791,7 +2752,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}hapusvote
 │
 └───────⭓
-🔹 ${ownername} 
+${ownername} 
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/group.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -2851,7 +2812,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}soundcloud [url]
 │
 └───────⭓
-🔹 ${ownername}
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/dwn.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -2905,7 +2866,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}ringtone [query]
 │
 └───────⭓
-🔹 ${ownername}
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/search.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -2964,7 +2925,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}megumin
 │⭔ ${prefix}quotedilan
 └───────⭓
-🔹 ${ownername}
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/anime.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3040,7 +3001,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}gluetext
 │
 └───────⭓
-🔹 ${ownername}
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/tp.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3097,7 +3058,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}retrolol
 │
 └───────⭓
-🔹 ${ownername}
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/po.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3151,7 +3112,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}ytcertificate
 │
 └───────⭓
-🔹 ${ownername}
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/ep.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3215,7 +3176,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}suitpvp [@tag]
 │
 └───────⭓
-🔹 ${ownername}
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/fun.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3290,6 +3251,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}shio
 │
 └───────⭓
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/prim.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3349,6 +3311,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}styletext
 │
 └───────⭓
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/conv.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3402,6 +3365,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}listonline
 │
 └───────⭓
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/main.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3454,6 +3418,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}delmsg
 │
 └───────⭓
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/data.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3503,6 +3468,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}sendkontak
 │
 └───────⭓
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/anon.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3552,6 +3518,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}tafsirsurah
 │
 └───────⭓
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/islam.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3607,6 +3574,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}tupai
 │
 └───────⭓
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/voice.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3679,6 +3647,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 ├ ${prefix}poke
 ├ ${prefix}dance
 ╰❒ ${prefix}cringe
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/ranme.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3772,6 +3741,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}setppbot [image]
 │
 └───────⭓
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/own.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3821,6 +3791,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}puisi
 │
 └───────⭓
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/tamp.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -3861,7 +3832,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break
             case 'allmenu': {
-                anu = `┌──⭓ *「🔹 ALL MENU HERE 🔹」*\n
+                anu = `┌──⭓ *「 ALL MENU 」*
                 
 │📍 Si Beban: ${pushname}
 │📍 Creator : ${ownername}
@@ -3889,9 +3860,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}upvote
 │⭔ ${prefix}cekvote
 │⭔ ${prefix}hapusvote
-│⭔ ${prefix}antilink *Off/On*
-│⭔ ${prefix}mute *Off/On*
-│⭔ ${prefix}afk [text]
 │
 └───────⭓
 
@@ -4213,6 +4181,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}puisi
 │
 └───────⭓
+${ownername}
 `
                 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
                 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
