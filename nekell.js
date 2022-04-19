@@ -430,12 +430,12 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'W E B S I T E',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -471,12 +471,12 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'W E B S I T E',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -512,12 +512,12 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'W E B S I T E',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -593,12 +593,12 @@ Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'W E B S I T E',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -639,7 +639,7 @@ Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -680,7 +680,7 @@ Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -751,7 +751,7 @@ Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
                 if (!text) throw `Example : ${prefix + command} lagu\n\nOption : \n1. lagu\n2. gambar\n3. kata\n4. kalimat\n5. lirik\n6.lontong`
                 if (args[0] === "lagu") {
                     if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                    let anu = await fetchJson('https://fatiharridho.github.io/tebaklagu.json')
+                    let anu = await fetchJson('https://fatuharridho.github.io/tebaklagu.json')
                     let result = anu[Math.floor(Math.random() * anu.length)]
                     let msg = await nekell.sendMessage(m.chat, { audio: { url: result.link_song }, mimetype: 'audio/mpeg' }, { quoted: m })
                     nekell.sendText(m.chat, `Lagu Tersebut Adalah Lagu dari?\n\nArtist : ${result.artist}\nWaktu : 60s`, msg).then(() => {
@@ -1251,7 +1251,7 @@ break
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "phoneNumber": 'https://instagram.com/bernekellboy_'
+                                    "phoneNumber": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -1291,7 +1291,7 @@ break
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M ',
-                                    "phoneNumber": 'https://instagram.com/bernekellboy_'
+                                    "phoneNumber": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -2373,8 +2373,8 @@ ${id}`)
 		}
 		break
 		case 'alquran': {
-		if (!args[0]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2 beserta audionya, dan ayatnya 1 aja`
-		if (!args[1]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2 beserta audionya, dan ayatnya 1 aja`
+		if (!args[0]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah surah Al-nekellah ayat 2 beserta audionya, dan ayatnya 1 aja`
+		if (!args[1]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah surah Al-nekellah ayat 2 beserta audionya, dan ayatnya 1 aja`
 		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/quran?surah=${args[0]}&ayat=${args[1]}`)
 		let txt = `*Arab* : ${res.result.data.text.arab}
 *English* : ${res.result.data.translation.en}
@@ -2386,8 +2386,8 @@ ${id}`)
 		}
 		break
 		case 'tafsirsurah': {
-		if (!args[0]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah tafsir surah Al-Fatihah ayat 2`
-		if (!args[1]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah tafsir surah Al-Fatihah ayat 2`
+		if (!args[0]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah tafsir surah Al-nekellah ayat 2`
+		if (!args[1]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah tafsir surah Al-nekellah ayat 2`
 		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/quran?surah=${args[0]}&ayat=${args[1]}`)
 		let txt = `「 *Tafsir Surah*  」
 
@@ -2684,51 +2684,279 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 m.reply(respon)
             }
             break 
+            case 'apakah':
+				if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} saya wibu`)
+					const apa = ['Iya', 'Tidak', 'Bisa Jadi', 'Betul']
+					const kah = apa[Math.floor(Math.random() * apa.length)]
+nekell.sendMessage(from, { text: `Pertanyaan : Apakah ${q}\nJawaban : ${kah}` }, { quoted: m })
+
+					break
+case 'bisakah':
+				if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} saya wibu`)
+					const bisa = ['Bisa','Gak Bisa','Gak Bisa Ajg Aaokawpk','TENTU PASTI KAMU BISA!!!!']
+					const ga = bisa[Math.floor(Math.random() * bisa.length)]
+nekell.sendMessage(from, { text: `Pertanyaan : ${q}\nJawaban : ${ga}` }, { quoted: m })
+
+					break
+case 'bagaimanakah':
+				if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} saya wibu`)
+					const gimana = ['Gak Gimana2', 'Sulit Itu Bro', 'Maaf Bot Tidak Bisa Menjawab', 'Coba Deh Cari Di Gugel','astaghfirallah Beneran???','Pusing ah','Owhh Begitu:(','Yang Sabar Ya Bos:(','Gimana yeee']
+					const ya = gimana[Math.floor(Math.random() * gimana.length)]
+nekell.sendMessage(from, { text: `Pertanyaan : ${q}\nJawaban : ${ya}` }, { quoted: m })
+
+					break
+case 'rate':
+ 
+				if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} Gambar aku`)
+					const ra = ['5', '10', '15' ,'20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
+					const te = ra[Math.floor(Math.random() * ra.length)]
+nekell.sendMessage(from, { text: `Rate : ${q}\nJawaban : *${te}%*` }, { quoted: m })
+
+					break
+case 'gantengcek':
+  case 'cekganteng':
+   
+				if (!q) return reply(`Penggunaan ${command} Nama\n\nContoh : ${command} Riych`)
+					const gan = ['5', '10', '15' ,'20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
+					const teng = gan[Math.floor(Math.random() * gan.length)]
+nekell.sendMessage(from, { text: `Nama : ${q}\nJawaban : *${teng}%*` }, { quoted: m })
+
+					break
+case 'cantikcek':
+  case 'cekcantik':
+   
+				if (!q) return reply(`Penggunaan ${command} Nama\n\nContoh : ${command} Riych`)
+					const can = ['5', '10', '15' ,'20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
+					const tik = can[Math.floor(Math.random() * can.length)]
+nekell.sendMessage(from, { text: `Nama : ${q}\nJawaban : *${tik}%*` }, { quoted: m })
+
+					break
+case 'sangecek':
+  case 'ceksange':
+    case 'gaycek':
+      case 'cekgay':
+        case 'lesbicek':
+          case 'ceklesbi':
+				if (!q) return reply(`Penggunaan ${command} Nama\n\nContoh : ${command} ${pushname}`)
+					const sangeh = ['5', '10', '15','20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
+					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
+nekell.sendMessage(from, { text: `Nama : ${q}\nJawaban : *${sange}%*` }, { quoted: m })
+
+					break
+case 'kapankah':
+				if (!q) return reply(`Penggunaan ${command} Pertanyaan\n\nContoh : ${command} Saya Mati`)
+					const kapan = ['5 Hari Lagi', '10 Hari Lagi', '15 Hari Lagi','20 Hari Lagi', '25 Hari Lagi','30 Hari Lagi','35 Hari Lagi','40 Hari Lagi','45 Hari Lagi','50 Hari Lagi','55 Hari Lagi','60 Hari Lagi','65 Hari Lagi','70 Hari Lagi','75 Hari Lagi','80 Hari Lagi','85 Hari Lagi','90 Hari Lagi','100 Hari Lagi','5 Bulan Lagi', '10 Bulan Lagi', '15 Bulan Lagi','20 Bulan Lagi', '25 Bulan Lagi','30 Bulan Lagi','35 Bulan Lagi','40 Bulan Lagi','45 Bulan Lagi','50 Bulan Lagi','55 Bulan Lagi','60 Bulan Lagi','65 Bulan Lagi','70 Bulan Lagi','75 Bulan Lagi','80 Bulan Lagi','85 Bulan Lagi','90 Bulan Lagi','100 Bulan Lagi','1 Tahun Lagi','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','Besok','Lusa',`Abis Command Ini Juga Lu ${q}`]
+					const kapankah = kapan[Math.floor(Math.random() * kapan.length)]
+nekell.sendMessage(from, { text: `Pertanyaan : ${q}\nJawaban : *${kapankah}*` }, { quoted: m })
+					break
+case 'wangy':
+              if (!q) return reply (`Contoh : .wangy Riy`)
+              qq = q.toUpperCase()
+              awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaaah baunya rambut ${qq} wangyy aku mau nyiumin aroma wangynya ${qq} AAAAAAAAH ~ Rambutnya.... aaah rambutnya juga pengen aku elus-elus ~~ AAAAAH ${qq} keluar pertama kali di anime juga manis ❤️ ❤️ ❤️ banget AAAAAAAAH ${qq} AAAAA LUCCUUUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️apa ? ${qq} itu gak nyata ? Cuma HALU katamu ? nggak, ngak ngak ngak ngak NGAAAAAAAAK GUA GAK PERCAYA ITU DIA NYATA NGAAAAAAAAAAAAAAAAAK PEDULI BANGSAAAAAT !! GUA GAK PEDULI SAMA KENYATAAN POKOKNYA GAK PEDULI. ❤️ ❤️ ❤️ ${qq} gw ... ${qq} di laptop ngeliatin gw, ${qq} .. kamu percaya sama aku ? aaaaaaaaaaah syukur ${q} aku gak mau merelakan ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH GUA MASIH PUNYA ${qq} SENDIRI PUN NGGAK SAMA AAAAAAAAAAAAAAH`
+             m.reply(awikwok)
+              break
+case 'cekmati':
+              if (!q) return reply(`Invalid!\n\nYg mau di cek siapa kontol?`)
+              predea = await axios.get(`https://api.agify.io/?name=${q}`)
+              m.reply(`Nama : ${predea.data.name}\n*Mati Pada Umur :* ${predea.data.age} Tahun.\n\n_Cepet Cepet Tobat Bro Soalnya Mati ga ada yang tau_`)
+              break
+case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
+            if (!m.quoted && !text) throw `Kirim/reply text dengan caption ${prefix + command}`
+            ter = command[1].toLowerCase()
+            tex = m.quoted ? m.quoted.text ? m.quoted.text : q ? q : m.text : q ? q : m.text
+            m.reply(tex.replace(/[aiueo]/g, ter).replace(/[AIUEO]/g, ter.toUpperCase()))
+            break
             case 'owner': case 'creator': case 'nekell': {
                 nekell.sendContact(m.chat, global.owner, m)
             }
             break
-            case 'menu': case 'list': case '?': {
-                anu = `╭─────[ *MENU SIMPEL HERE!* ]─────✧\n│➸ Hallo ${pushname} Saya ${botname} Kamu Bisa Memakai Bot Sesuka Hati Dengan Mengetik *${prefix}allmenu*\n\n│➸ Memakailah Dengan Sabar Dan Tidak Mengspam.
- ` 
-                  let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/nekell.jpg') }, { upload: nekell.waUploadToServer })
-                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            imageMessage: message.imageMessage,
-                            hydratedContentText: anu,
-                            hydratedButtons: [{
-                                "urlButton": {
-                                    "displayText": 'W E B S I T E',
-                                    "url": 'https://www.rootsec.xyz/'
-                                }
-                            }, {
-                                "urlButton": {
-                                    "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
-                                }
-                            }, {
-                                "quickReplyButton": {
-                                    "displayText": 'ALLMENU',
-                                    "id": 'allmenu'
-                                }
-                            }, {
-                                "quickReplyButton": {
-                                    "displayText": 'OWNER',
-                                    "id": 'owner'
-                                }  
-                            }, {
-                                "quickReplyButton": {
-                                    "displayText": 'SEWA',
-                                    "id": 'sewa'
-                                }
-                            }]
-                        }
-                    }
-                }), { userJid: m.chat, quoted: m })
-                nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            case 'command': {
+let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                listMessage :{
+                    title: `Hallo ${pushname} Saya ${botname} Ini Adalah List Menu Simpel, Silahkan Pilih Di Bawah`,
+                    description: "\n",
+                    buttonText: "TOUCH ME SENPAI",
+                    footerText: `${footer} | © ${ownername}`,
+                    listType: "SINGLE_SELECT",
+                    sections: [{
+								"title": "🗃️Fitur Grup🗃️",
+								"rows": [
+									{
+										"title": "Grup Fitur",
+										"description": "Menampilkan Fitur Grup",
+										"rowId": `${prefix}groupmenu`
+									}
+								]
+							},
+							{
+								"title": "🤖All Menu🤖",
+								"rows": [
+									{
+										"title": "All Menu",
+										"description": "Menampilkan Semua Fitur!",
+										"rowId": `${prefix}allmenu`
+									},
+									{
+									    "title": "📺Anime Menu",
+									    "description": "Menampilkan Anime Menu",
+									    "rowId": `${prefix}animemenu`
+									},
+									{
+									    "title": "📢Tamparan Quotes",
+									    "description": "Menampilkan Tamparan Menu",
+									    "rowId": `${prefix}tamparanquote`
+									},
+									{
+									    "title": "🛒Sewa",
+									    "description": "Menampilkan List Sewa Bot",
+									    "rowId": `${prefix}sewa`
+									},
+									{
+										"title": "💾Download Menu💾",
+										"description": "Menampilkan Download Menu",
+										"rowId": `${prefix}downloadmenu`
+									},
+									{
+										"title": "🔍Search Menu🔍",
+										"description": "Menampilkan Search Menu",
+										"rowId": `${prefix}searchmenu`
+									},
+									{
+										"title": "📂Random Menu📂",
+										"description": "Menampilkan Random Menu",
+										"rowId": `${prefix}randommenu`
+										},
+										{
+											"title": "🖌️Text Pro Menu🖌️",
+										"description": "Menampilkan Text Pro menu",
+										"rowId": `${prefix}textpromenu`
+										},
+										{
+											"title": "🖍️Photo Oxy Menu🖍️",
+										"description": "Menampilkan Photo Oxy Menu",
+										"rowId": `${prefix}photooxymenu`
+										},
+										{
+											"title": "🖊️Ephoto Menu🖊️",
+										"description": "Menampilkan Ephoto Menu",
+										"rowId": `${prefix}ephotomenu`
+										},
+										{
+											"title": "👑Fun Menu👑",
+										"description": "Menampilkan Fun Menu",
+										"rowId": `${prefix}funmenu`
+										},
+										{
+											"title": "🧸Primbon Menu🧸",
+										"description": "Menampilkan Primbon Menu",
+										"rowId": `${prefix}primbonmenu`
+										},
+										{
+											"title": "🛒Convert Menu🛒",
+										"description": "Menampilkan Convert Menu",
+										"rowId": `${prefix}convertmenu`
+										},
+										{
+											"title": "🏷️Main Menu🏷️",
+										"description": "Menampilkan Main Menu",
+										"rowId": `${prefix}mainmenu`
+										},
+										{
+											"title": "📁Database Menu📁",
+										"description": "Menampilkan Database Menu",
+										"rowId": `${prefix}databasemenu`
+										},
+										{
+											"title": "🎭Anonymous Menu🎭",
+										"description": "Menampilkan Anonymous Menu",
+										"rowId": `${prefix}anonymousmenu`
+										},
+										{
+											"title": "📌Islamic Menu📌",
+										"description": "Menampilkan Islamic Menu",
+										"rowId": `${prefix}islamicmenu`
+										},
+										{
+											"title": "🎙️Voice Changer Menu🎙️",
+										"description": "Menampilkan Voice Changer Menu",
+										"rowId": `${prefix}voicechangermenu`
+										},
+										{
+											"title": "🪀Owner Menu🪀",
+										"description": "Menampilkan Owner Menu",
+										"rowId": `${prefix}ownermenu`
+									},
+									{
+										    "title": "💸Donasi💸
+										    "description": "Menampilkan List Donasu",
+										    "rowId": `${prefix}donasi`
+										},
+										{
+										    "title": "🍼Gc Bot 🍼",
+										    "description": "Menampilkan List Gc Bot",
+										    "rowId": `${prefix}gcbot`
+										},
+										}
+								]
+							},
+							{
+							    "title": "🪀Script For Bot 🪀",
+							    "rows": [
+							        {
+							             "title": "Script Bot",
+							             "description": "Menampilkan Script For Bot",
+							             "rowId": `{$prefix}sc`
+							         }
+							    ]
+							},
+							{
+							    "title": "📜Rules Bot 📜",
+							    "rows": [
+							        {
+							             "title": "Rules Bot",
+							             "description": "Menampilkan Rules For Bot",
+							             "rowId": `{$prefix}rules`
+							         }
+							    ]
+							},
+							{
+							
+								"title": "👾Open Jasa Sewabot👾",
+								"rows": [
+									{
+										"title": "Sewa Bot",
+										"description": "Klik Untuk Melihat Daftar Sewabot",
+										"rowId": `${prefix}sewa`
+									}
+								]
+							},
+							{
+								"title": "🌍Info Tentang Owner?🌏",
+								"rows": [
+									{
+										"title": "Chat Owner",
+										"description": "menampilkan Nomor Owner",
+										"rowId": `${prefix}owner`
+									}
+								]
+							},
+							{
+								"title": "📸Thanks To📸",
+								"rows": [
+									{
+										"title": "Contributor",
+										"description": "menampilkan Nama Teman - Teman Saya Yang Sudah Membantu Merakit Bot Ini !!",
+										"rowId": `${prefix}tqto`
+									}
+								]
+							}
+						],
+          listType: 1
+                }
+            }), { userJid: m.chat, quoted: m })
+            nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
-            break 
+            break
             case 'groupmenu': case 'grupmenu': {
                 anu = `┌──⭓ *Group Menu*
 │
@@ -2763,12 +2991,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -2823,12 +3051,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -2877,12 +3105,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -2936,12 +3164,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3012,12 +3240,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3069,12 +3297,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3123,12 +3351,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3187,12 +3415,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3262,12 +3490,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3322,12 +3550,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3376,12 +3604,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3429,12 +3657,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3479,12 +3707,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3529,12 +3757,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3558,7 +3786,7 @@ ${ownername}
                 nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break 
-            case 'voicemenu': {
+            case 'voicechangermenu': {
                 anu = `┌──⭓ *Voice Changer*
 │
 │⭔ ${prefix}bass
@@ -3585,12 +3813,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3658,12 +3886,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3699,12 +3927,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3752,12 +3980,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3802,12 +4030,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
@@ -3831,15 +4059,55 @@ ${ownername}
                 nekell.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
-            case 'allmenu': {
-                anu = `┌──⭓ *「 ALL MENU 」*
-                
-│📍 Si Beban: ${pushname}
-│📍 Creator : ${ownername}
-│📍 Prefix  : ${prefix}
-│📍 Owner   : ${ownernumber}
-│📍 Quotes  : ${quotes}
+            case 'allmenu': case 'menu': case 'help': {
+let getGroups = await fatih.groupFetchAllParticipating()
+let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
+let anu = groups.map(v => v.id)
+let d = new Date(new Date + 3600000)
+let locale = "id"
+let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
+day: 'numeric',
+month: 'long',
+year: 'numeric'
+}).format(d)
+let userBlock = await fatih.fetchBlocklist()
+let userBanned = Object.values(global.db.data.users).filter(user => user.banned == true).length
+let userRegister = Object.values(global.db.data.users).filter(user => user.registered == true).length
+try { bio = await fatih.fetchStatus(m.sender)} catch { bio = { status: 'Tidak ada bio' }}
+let txt = `${ucapannya}
 
+╭─❒ 「 Date Info 」
+├ Masehi : *${tanggal(new Date)}*
+├ Hijriah : *${dateIslamic}*
+╰❒
+
+╭─❒ 「 Bot Info 」
+├ Uptime : ${runtime(process.uptime())}
+├ Ostime : ${runtime(os.uptime())}
+├ Timeserver : ${time.split('WIB')[0]}
+├ Platform : ${os.platform()}
+├ Hostname : ${os.hostname()}
+├ Database : MongoDB
+├ Tipe : Multi-Device
+├ Total Groups : ${anu.length}
+├ Total Chats : ${totalchats.length}
+├ Total Users : ${totalusers.length}
+├ User Ter-Block : ${userBlock.length}
+├ User Ter-Banned : ${userBanned}
+├ User Registered : ${userRegister}
+╰❒
+
+╭─❒ 「 User Info 」
+├ Name : ${pushname}
+├ Bio : ${bio.status}
+├ Api : https://wa.me/${m.sender.split('@')[0]}
+├ Nomor : ${m.sender.split('@')[0]}
+├ Register : ${global.db.data.users[m.sender].registered ? `✅` : `❌`}
+├ Device : ${getDevice(m.id)}
+╰❒
+
+Aku Masih Beta Dari *Multi-Device* Jadi Harap Maklumin Kalau Ada Error Ya😇`
+                
 ┌──⭓ *Group Menu*
 │
 │⭔ ${prefix}linkgroup
@@ -4192,12 +4460,12 @@ ${ownername}
                             hydratedButtons: [{
                                 "urlButton": {
                                     "displayText": 'B L O G G E R',
-                                    "url": 'https://www.rootsec.xyz/'
+                                    "url": `${myweb}`
                                 }
                             }, {
                                 "urlButton": {
                                     "displayText": 'I N S T A G R A M',
-                                    "url": 'https://instagram.com/bernekellboy_'
+                                    "url": `${igeh}`
                                 }
                             }, {
                                 "quickReplyButton": {
