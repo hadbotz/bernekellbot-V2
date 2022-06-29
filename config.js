@@ -18,15 +18,15 @@ global.APIKeys = {
 }
 
 // Other
-global.owner = ['6289695073357','6281224413305','6289695073357']
-global.ownernumber = 'wa.me/6289695073357'
-global.ownername = 'Bernekellboy🔥'
-global.botname = 'Bernekell-Bot🤖'
-global.packname = '© BERNEKELLBOT-MD'
-global.facebook = 'Bernekellboy ID'
+global.owner = ['6285749433476','628128551181']
+global.ownernumber = 'wa.me/6285749433476'
+global.ownername = 'HAD🔥'
+global.botname = 'HadBot-MD🤖'
+global.packname = '© HadBot-MD'
+global.facebook = 'KOSONG'
 global.allfriend = '📺 All My Friends And All Creator Bot Wangsap'
 global.quotes = '📜 Jadikan hinaan itu sebagai alasan lu agar semangat dan bisa untuk membuktikan bahwa lu bukaj seperti yang mereka kira!.'
-global.author = 'Ig : @bernekellboy_'
+global.author = 'HAD STORE'
 global.sessionName = 'nekell'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
